@@ -1,0 +1,22 @@
+.navbar{
+    height: 112px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3rem;
+}
+.navbar a.active{
+    /* border-bottom: 4px solid #000; */
+    text-decoration: underline;
+}
+.navbar a{
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: var(--cor-fonte-principal);
+}
+
+@media (max-width: 744px){
+    .navbar{
+        height: 72px;
+    }
+}
