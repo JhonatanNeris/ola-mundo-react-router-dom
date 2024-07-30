@@ -2,7 +2,7 @@ import React from 'react'
 
 //Import components
 import Banner from '../../components/Banner'
-import Post from '../../components/Post'
+import PostCard from '../../components/PostCard'
 
 //Import CSS
 import styles from './Home.module.css'
@@ -14,7 +14,7 @@ const Home = () => {
       <ul className={styles.posts}>
         {posts.map((post) => (
           <li key={post.id}>
-            <Post post={post}/>
+            <PostCard post={post}/>
           </li>
         ))}
 
