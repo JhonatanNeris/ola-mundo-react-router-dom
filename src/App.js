@@ -7,6 +7,7 @@ import Home from './pages/Home';
 //Router
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Post from './pages/Post';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -17,10 +18,11 @@ function App() {
           <Route path="/" element={<PageDefault/>}>
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
-            <Route path='posts/:id' element={<Post/>} />
-            <Route path="*" element={<div>Página não encontrada</div>} />
           </Route>
+            <Route path='posts/:id' element={<Post/>} />
+            <Route path="*" element={<NotFound/>} />
         </Routes>
+        <Footer />
       </BrowserRouter>
 
 

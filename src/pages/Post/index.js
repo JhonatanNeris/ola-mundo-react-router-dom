@@ -12,6 +12,10 @@ import PostModel from '../../components/PostModel'
 
 //React markdown
 import ReactMarkdown from 'react-markdown'
+import PageDefault from '../../components/PageDefault'
+
+//Pages
+import NotFound from '../NotFound'
 
 const Post = () => {
 
@@ -25,17 +29,23 @@ const Post = () => {
 
     console.log(post)
 
+    if (!post) {
+        return <NotFound/>
+    }
+
     return (
-        <PostModel
-            photoCape={`/assets/posts/${post.id}/capa.png`}
-            title={post.titulo}
-        >
-            <div className='post-markdown-container'>
-                <ReactMarkdown>
-                    {post.texto}
-                </ReactMarkdown>
-            </div>
-        </PostModel>
+        <PageDefault>
+            <PostModel
+                photoCape={`/assets/posts/${post.id}/capa.png`}
+                title={post.titulo}
+            >
+                <div className='post-markdown-container'>
+                    <ReactMarkdown>
+                        {post.texto}
+                    </ReactMarkdown>
+                </div>
+            </PostModel>
+        </PageDefault>
     )
 }
 

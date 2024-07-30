@@ -5,6 +5,7 @@ import styles from './PostCard.module.css'
 
 //React Router Dom
 import { Link } from 'react-router-dom'
+import DefaultButton from '../DefaultButton'
 
 const PostCard = ({ post }) => {
   return (
@@ -18,7 +19,7 @@ const PostCard = ({ post }) => {
         <h2 className={styles.title}>
           {post.titulo}
         </h2>
-        <button className={styles.buttonRead}>Ler</button>
+        <DefaultButton>Ler</DefaultButton>
 
       </div>
     </Link>

@@ -4,17 +4,16 @@ import { Outlet } from 'react-router-dom'
 
 //Components
 import Banner from '../Banner'
-import Footer from '../Footer'
 
-const PageDefault = () => {
+const PageDefault = ({children}) => {
   return (
     <main>
         <Banner/>
 
         {/* Rota a ser renderizada */}
         <Outlet/>
+        {children}
 
-        <Footer />
     </main>
   )
 }
